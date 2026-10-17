@@ -128,12 +128,9 @@ Live deployment links will be added after deployment and testing.
 
 GitHub: https://github.com/SurabhiRai
 
-## Acknowledgements
+## Credits
 
-This project is based on the open-source resume-builder project by Abhinav Suri:
-
-https://github.com/Abhinavsuri90/resume-builder
-
+ResuMate AI is a customized version of an existing open-source resume builder. Required third-party license and attribution notices are retained.
 The original project's license and applicable attribution notices are retained. This version includes customizations to the branding, interface, and project presentation.
 
 ---
