@@ -1,261 +1,138 @@
-# 🚀 Resume Builder - Full Stack Application
 
-A modern, responsive resume builder application built with React, Node.js, and MongoDB. Create professional resumes with multiple templates, AI-powered content suggestions, and real-time preview.
+# ResuMate AI
 
-## 🌐 Live Demo
+**An AI-assisted resume builder for creating professional, customizable resumes.**
 
-### Live Application
-- **Frontend**: [https://resume-builder-zeta-woad.vercel.app](https://resume-builder-zeta-woad.vercel.app)
-- **Backend API**: [https://resume-builder-xw2z.onrender.com](https://resume-builder-xw2z.onrender.com)
-- **GitHub Repository**: [https://github.com/Abhinavsuri90/resume-builder](https://github.com/Abhinavsuri90/resume-builder)
+ResuMate AI is a full-stack web application customized to help users create, edit, preview, and download professional resumes using modern templates and AI-assisted writing tools.
 
-## ✨ Features
+## Features
 
-### 🎯 Core Resume Building
-- **Multiple Resume Templates**: Choose from Classic, Modern, Minimal designs
-- **AI-Powered Content**: Get intelligent suggestions for resume content with Gemini AI
-- **Real-time Preview**: See changes instantly as you type
-- **PDF Export**: Download professional resumes as PDF files
-- **Image Upload**: Add profile pictures with ImageKit integration
-- **Template Customization**: Personalize colors and layouts
+- **Resume Creation:** Create and edit resumes with a structured form.
+- **Resume Templates:** Choose from available resume layouts.
+- **Live Preview:** Preview resume changes while editing.
+- **Customization:** Personalize resume templates with accent colors.
+- **PDF Export:** Print or save a completed resume as a PDF.
+- **AI Writing Assistance:** Generate enhanced professional summaries and job descriptions using the configured AI service.
+- **Resume Import:** Import an existing PDF resume for text extraction and AI-assisted data extraction. This feature is currently being tested.
+- **User Accounts:** Registration, login, and resume management are part of the application.
 
-### 🚀 Interactive Demo Experience  
-- **Try Demo Button**: Interactive 6-step walkthrough without signup
-- **Live Preview Panel**: Real-time resume building simulation
-- **AI Content Generation**: Typing animation showing AI in action  
-- **Auto-Play Mode**: Automated demo with pause/resume controls
-- **Template Showcase**: Live template switching demonstration
-- **Confetti Animation**: Celebration effects on completion
-
-### 💼 Professional Website Features
-- **Complete Footer Pages**: 6 comprehensive professional pages
-  - **Company**: Mission, vision, team, values, and statistics
-  - **Blogs**: Career insights with featured articles and newsletter
-  - **Community**: Member features, success stories, and events  
-  - **Careers**: Job openings with hiring process and benefits
-  - **Affiliate**: Partner program with commission structure
-  - **Terms**: Comprehensive legal terms and conditions
-- **Enhanced Footer**: Newsletter signup, social media, back-to-top button
-- **Professional Branding**: Consistent design and Indian market focus
-
-### 🔐 User Management & Security
-- **User Authentication**: Secure JWT-based login and registration
-- **Cloud Storage**: Save and manage multiple resumes securely
-- **Resume Privacy**: Public/private resume sharing controls
-- **Data Protection**: Encrypted user data and secure file handling
-
-### 📱 User Experience
-- **Responsive Design**: Perfect on desktop, tablet, and mobile
-- **Smooth Animations**: Professional transitions and hover effects
-- **Intuitive Navigation**: Easy-to-use interface with clear workflows
-- **Toast Notifications**: Beautiful success/error messages
-- **Loading States**: Proper feedback during operations
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
-- **React 18** - Modern UI library
-- **Vite** - Lightning fast build tool
-- **Tailwind CSS** - Utility-first CSS framework
-- **Redux Toolkit** - State management
-- **React Router** - Client-side routing
-- **Axios** - HTTP client
-- **React Hot Toast** - Beautiful notifications
+- React
+- Vite
+- Tailwind CSS
+- Redux Toolkit
+- React Router
+- Axios
 
 ### Backend
-- **Node.js** - JavaScript runtime
-- **Express.js** - Web framework
-- **MongoDB** - NoSQL database
-- **Mongoose** - MongoDB object modeling
-- **JWT** - Authentication
-- **bcrypt** - Password hashing
-- **Multer** - File upload handling
-- **ImageKit** - Image optimization and delivery
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT authentication
 
-## 🚀 Getting Started
+### AI and Integrations
+- OpenAI-compatible chat completions API
+- PDF text extraction
+- ImageKit integration for image handling
 
-### Prerequisites
-- Node.js (v16 or higher)
-- MongoDB Atlas account or local MongoDB
-- ImageKit account (for image uploads)
-- OpenAI/Gemini API key (for AI features)
+The actual AI provider depends on the backend configuration and environment variables.
 
-### Installation
+## Project Structure
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Abhinavsuri90/resume-builder.git
-   cd resume-builder
-   ```
-
-2. **Install server dependencies**
-   ```bash
-   cd server
-   npm install
-   ```
-
-3. **Install client dependencies**
-   ```bash
-   cd ../client
-   npm install
-   ```
-
-4. **Environment Setup**
-   
-   **Server (.env):**
-   ```bash
-   cd ../server
-   cp .env.example .env
-   # Edit .env with your actual values
-   ```
-   
-   **Client (.env):**
-   ```bash
-   cd ../client
-   cp .env.example .env
-   # Edit .env with your backend URL
-   ```
-
-5. **Start the development servers**
-   
-   **Backend (Terminal 1):**
-   ```bash
-   cd server
-   npm run server
-   ```
-   
-   **Frontend (Terminal 2):**
-   ```bash
-   cd client
-   npm run dev
-   ```
-
-6. **Access the application**
-   - Frontend: http://localhost:5173
-   - Backend API: http://localhost:3000
-
-## 📁 Project Structure
-
-```
-resume-builder/
-├── client/                     # React frontend application
+```text
+resumate-ai-project/
+├── client/             # React frontend
 │   ├── src/
-│   │   ├── components/         # Reusable UI components
-│   │   │   ├── home/          # Homepage components (Hero, Footer, etc.)
-│   │   │   ├── templates/     # Resume template components
-│   │   │   ├── DemoModal.jsx  # Interactive demo modal
-│   │   │   └── ...
-│   │   ├── pages/             # Page components
-│   │   │   ├── About.jsx      # About us page
-│   │   │   ├── Blogs.jsx      # Blog listing page
-│   │   │   ├── Careers.jsx    # Careers page
-│   │   │   ├── Community.jsx  # Community page
-│   │   │   ├── Company.jsx    # Company information
-│   │   │   ├── Terms.jsx      # Terms of service
-│   │   │   ├── Affiliate.jsx  # Affiliate program
-│   │   │   ├── Dashboard.jsx  # User dashboard
-│   │   │   ├── ResumeBuilder.jsx # Resume editing interface
-│   │   │   └── ...
-│   │   ├── assets/            # Static assets and templates
-│   │   ├── app/               # Redux store and slices
-│   │   └── configs/           # API and configuration files
-├── server/                    # Node.js backend application
-│   ├── configs/              # Database and service configurations
-│   │   ├── db.js            # MongoDB connection
-│   │   ├── ai.js            # AI service (Gemini) config
-│   │   ├── imageKit.js      # ImageKit configuration
-│   │   └── multer.js        # File upload configuration
-│   ├── controllers/          # API route controllers
-│   │   ├── userController.js # User management
-│   │   ├── resumeController.js # Resume operations
-│   │   └── aiController.js   # AI content generation
-│   ├── middlewares/          # Custom middleware functions
-│   ├── models/               # Database models
-│   │   ├── User.js          # User schema
-│   │   └── Resume.js        # Resume schema
-│   ├── routes/               # API route definitions
-│   └── server.js             # Express server entry point
-├── DEPLOYMENT.md             # Deployment documentation
-├── README.md                 # Project documentation
-└── package.json              # Project dependencies
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── app/
+│   │   ├── assets/
+│   │   └── configs/
+│   └── package.json
+├── server/             # Express backend
+│   ├── configs/
+│   ├── controllers/
+│   ├── middlewares/
+│   ├── models/
+│   ├── routes/
+│   └── server.js
+├── README.md
+└── .gitignore
 ```
 
-## 🔐 Environment Variables
+## Local Setup
 
-### Server Variables
-- `JWT_SECRET` - Secret for JWT token generation
-- `MONGODB_URI` - MongoDB connection string
-- `IMAGEKIT_PRIVATE_KEY` - ImageKit private key
-- `OPENAI_API_KEY` - OpenAI/Gemini API key
-- `OPENAI_BASE_URL` - API base URL
-- `PORT` - Server port (default: 3000)
+### Requirements
+- Node.js
+- MongoDB database
+- Required AI and image-service credentials for the integrations you enable
 
-### Client Variables
-- `VITE_BASE_URL` - Backend API URL
+### 1. Install backend dependencies
 
-## 📦 Available Scripts
+```bash
+cd server
+npm install
+```
 
-### Server
-- `npm start` - Start production server
-- `npm run server` - Start development server with nodemon
+### 2. Install frontend dependencies
 
-### Client
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
+```bash
+cd ../client
+npm install
+```
 
-## 🚀 Deployment
+### 3. Configure environment variables
 
-### Frontend (Vercel)
-1. Push code to GitHub
-2. Connect repository to Vercel
-3. Set build settings:
-   - Framework: Vite
-   - Root Directory: `client`
-   - Build command: `npm run build`
-   - Output directory: `dist`
-4. Deploy automatically on every push
+Create a `server/.env` file using the project's environment example.
 
-### Backend (Render)
-1. Connect GitHub repository
-2. Set environment variables
-3. Deploy with automatic builds
+Configure the required database connection, JWT secret, AI credentials, and ImageKit credentials as applicable.
 
-## 🤝 Contributing
+Never commit actual API keys, passwords, or environment files to GitHub.
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+### 4. Start the backend
 
-## 📝 License
+From the `server` directory:
 
-This project is licensed under the MIT License.
+```bash
+npm run server
+```
 
-## 👨‍💻 Developer
+### 5. Start the frontend
 
-**Abhinav Suri**
-- GitHub: [@Abhinavsuri90](https://github.com/Abhinavsuri90)
+In a separate terminal:
 
-##  Acknowledgments
+```bash
+cd client
+npm run dev
+```
 
-- **React Team** for the amazing framework and ecosystem
-- **MongoDB** for the flexible and scalable database solution
-- **Google AI** for Gemini API integration capabilities
-- **Tailwind CSS** for the utility-first styling approach
-- **Netlify & Render** for reliable hosting platforms
-- **Open Source Community** for incredible tools and libraries
+The frontend normally runs at `http://localhost:5173` and the backend at `http://localhost:3000`.
 
----
+## Deployment
 
-### 📞 Contact & Support
+The frontend and backend require separate deployment configurations.
 
-- **Developer**: Abhinav Suri
-- Contact through GitHub profile
+- **Frontend:** Deploy the `client` directory using a React/Vite-compatible hosting service.
+- **Backend:** Deploy the `server` directory using a Node.js-compatible hosting service.
+- **Database:** Configure a production MongoDB connection.
+- **Environment variables:** Add production credentials through the hosting provider's environment settings.
 
+Live deployment links will be added after deployment and testing.
 
-**🌟 If this project helped you, please give it a star on GitHub!**
+## Developer
+
+**Customized and maintained by Surabhi Rai**
+
+GitHub: https://github.com/SurabhiRai
+
+## Credits
+
+ResuMate AI is a customized version of an existing open-source resume builder. Required third-party license and attribution notices are retained.
+The original project's license and applicable attribution notices are retained. This version includes customizations to the branding, interface, and project presentation.
 
 ---
-**Built with ❤️ in India 🇮🇳 **
+
+**ResuMate AI — Build your next career move.**
