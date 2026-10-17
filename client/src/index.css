@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+/* Global styles */
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Form fields */
+input:not([type="checkbox"]),
+textarea {
+  outline: none;
+  border: 1px solid #D4BE9D;
+  border-radius: 0.5rem;
+  resize: none;
+}
+
+input:not([type="checkbox"]):focus,
+textarea:focus {
+  outline: none;
+  border-color: #67343A;
+  box-shadow: 0 0 0 1px #67343A;
+}
+
+/* ResuMate AI colour palette */
+:root {
+  --rm-walnut: #302622;
+  --rm-oxblood: #67343A;
+  --rm-tobacco: #9A704F;
+  --rm-aged-paper: #D4BE9D;
+  --rm-parchment: #FAF9F6;
+}
+
+/* Main page colours */
+body {
+  background-color: var(--rm-parchment);
+  color: var(--rm-walnut);
+}
+
+/* Recolour green Tailwind classes */
+[class~="bg-green-300"] {
+  background-color: #FAF9F6 !important;
+}
+
+[class~="bg-green-50"] {
+  background-color: var(--rm-parchment) !important;
+}
+
+[class~="bg-green-500"],
+[class~="bg-green-600"] {
+  background-color: var(--rm-oxblood) !important;
+}
+
+[class~="bg-green-700"] {
+  background-color: var(--rm-walnut) !important;
+}
+
+[class~="text-green-600"],
+[class~="text-green-700"],
+[class~="fill-green-600"] {
+  color: var(--rm-oxblood) !important;
+}
+
+[class~="fill-green-600"] {
+  fill: var(--rm-oxblood) !important;
+}
+
+[class~="border-green-400"] {
+  border-color: var(--rm-tobacco) !important;
+}
+
+/* Hover colours */
+[class~="hover:bg-green-50"]:hover {
+  background-color: var(--rm-aged-paper) !important;
+}
+
+[class~="hover:bg-green-700"]:hover {
+  background-color: var(--rm-walnut) !important;
+}
+
+[class~="hover:text-green-600"]:hover,
+[class~="hover:text-green-700"]:hover {
+  color: var(--rm-oxblood) !important;
+}
+
+/* Gradient colours */
+[class~="from-green-700"] {
+  --tw-gradient-from: var(--rm-oxblood) var(--tw-gradient-from-position);
+}
+
+[class~="to-green-600"] {
+  --tw-gradient-to: var(--rm-tobacco) var(--tw-gradient-to-position);
+}
